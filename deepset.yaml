@@ -1,0 +1,15 @@
+services:
+  llamastack:
+    image: llamastack/distribution-starter:0.2.15
+    env_file: "deepset_env"
+    network_mode: "host"
+    tty: true
+    volumes:
+      - ./demo.py:/root/demo.py
+      - ./llama_stack_run.sh:/root/llama_stack_run.sh
+    entrypoint: ["bash", "/root/llama_stack_run.sh"]
+    deploy:
+      restart_policy:
+        condition: "no"
+volumes:
+  ollama:

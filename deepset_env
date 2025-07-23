@@ -1,0 +1,4 @@
+OPENAI_API_KEY=dummy
+ENABLE_VLLM=vllm
+VLLM_URL="http://localhost:8000/v1"
+VLLM_INFERENCE_MODEL="meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8"
